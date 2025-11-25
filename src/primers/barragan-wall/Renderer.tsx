@@ -11,7 +11,7 @@ interface RendererProps {
  * Signature Scene: 3D color walls
  * Constraint: No gradients. Color blocks with hard edges only.
  */
-export const RendererBarragan: React.FC<RendererProps> = ({ primer }) => {
+export const RendererBarragan: React.FC<RendererProps> = ({ primer: _primer }) => {
   return (
     <div 
       className="w-full h-screen flex items-center justify-center"

@@ -14,7 +14,7 @@ interface RendererProps {
  * This renderer creates the world of Wes Anderson: centered frames,
  * pastel tones, and a sense of precious, curated whimsy.
  */
-export const RendererAnderson: React.FC<RendererProps> = ({ primer }) => {
+export const RendererAnderson: React.FC<RendererProps> = ({ primer: _primer }) => {
   return (
     <div 
       className="w-full h-screen flex flex-col items-center justify-center p-8"

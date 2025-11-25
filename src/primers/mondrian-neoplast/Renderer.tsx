@@ -14,7 +14,7 @@ interface RendererProps {
  * This renderer is a living Mondrian composition: asymmetric grids,
  * primary color blocks, and pure orthogonal relationships.
  */
-export const RendererMondrian: React.FC<RendererProps> = ({ primer }) => {
+export const RendererMondrian: React.FC<RendererProps> = ({ primer: _primer }) => {
   return (
     <div 
       className="w-full h-screen flex items-center justify-center p-8"

@@ -14,7 +14,7 @@ interface RendererProps {
  * This renderer is cyberpunk noir: deep blacks, glowing neon,
  * and the promise of a digital future.
  */
-export const RendererNeon: React.FC<RendererProps> = ({ primer }) => {
+export const RendererNeon: React.FC<RendererProps> = ({ primer: _primer }) => {
   return (
     <div 
       className="w-full h-screen flex items-center justify-center relative overflow-hidden"

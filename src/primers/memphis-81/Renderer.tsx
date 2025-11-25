@@ -14,7 +14,7 @@ interface RendererProps {
  * This renderer embodies Memphis Group chaos: clashing colors,
  * floating shapes, intentional disorder, and playful defiance.
  */
-export const RendererMemphis: React.FC<RendererProps> = ({ primer }) => {
+export const RendererMemphis: React.FC<RendererProps> = ({ primer: _primer }) => {
   return (
     <div 
       className="w-full h-screen relative overflow-hidden flex items-center justify-center"

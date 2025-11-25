@@ -14,7 +14,7 @@ interface RendererProps {
  * This renderer embodies Tufte's principles: high data density,
  * sidenotes, sparklines, and invisible interface.
  */
-export const RendererTufte: React.FC<RendererProps> = ({ primer }) => {
+export const RendererTufte: React.FC<RendererProps> = ({ primer: _primer }) => {
   return (
     <div 
       className="w-full min-h-screen flex justify-center py-16 px-8"

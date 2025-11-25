@@ -11,7 +11,7 @@ interface RendererProps {
  * Signature Scene: Metro wayfinding map
  * Constraint: Single typeface family only
  */
-export const RendererVignelli: React.FC<RendererProps> = ({ primer }) => {
+export const RendererVignelli: React.FC<RendererProps> = ({ primer: _primer }) => {
   return (
     <div 
       className="w-full h-screen flex items-center justify-center p-8"

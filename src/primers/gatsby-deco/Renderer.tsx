@@ -14,7 +14,7 @@ interface RendererProps {
  * This renderer evokes the Jazz Age: deep blues, golden accents,
  * symmetrical arches, and ceremonial elegance.
  */
-export const RendererGatsby: React.FC<RendererProps> = ({ primer }) => {
+export const RendererGatsby: React.FC<RendererProps> = ({ primer: _primer }) => {
   return (
     <div 
       className="w-full h-screen flex items-center justify-center relative overflow-hidden"

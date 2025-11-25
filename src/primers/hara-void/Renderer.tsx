@@ -11,7 +11,7 @@ interface RendererProps {
  * Signature Scene: Disappearing object in radial void
  * Constraint: No brand colors. Expression through absence.
  */
-export const RendererHara: React.FC<RendererProps> = ({ primer }) => {
+export const RendererHara: React.FC<RendererProps> = ({ primer: _primer }) => {
   return (
     <div 
       className="w-full h-screen flex items-center justify-center relative"

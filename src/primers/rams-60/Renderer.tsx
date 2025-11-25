@@ -17,7 +17,7 @@ interface RendererProps {
  * - Zero hover effects
  * - No decorative elements whatsoever
  */
-export const RendererRams: React.FC<RendererProps> = ({ primer }) => {
+export const RendererRams: React.FC<RendererProps> = ({ primer: _primer }) => {
   const [display, setDisplay] = useState('0.00');
   const [currentValue, setCurrentValue] = useState(0);
   const [operator, setOperator] = useState<string | null>(null);

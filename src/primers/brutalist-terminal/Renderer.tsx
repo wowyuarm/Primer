@@ -14,7 +14,7 @@ interface RendererProps {
  * This renderer is pure terminal: monospace everything, command prompts,
  * blinking cursors, and the honesty of a text interface.
  */
-export const RendererBrutalist: React.FC<RendererProps> = ({ primer }) => {
+export const RendererBrutalist: React.FC<RendererProps> = ({ primer: _primer }) => {
   const [showCursor, setShowCursor] = useState(true);
 
   // Blink cursor

@@ -11,7 +11,7 @@ interface RendererProps {
  * Signature Scene: Church of Light cross
  * Constraint: Surfaces strictly grayscale. Color only for text/interaction.
  */
-export const RendererAndo: React.FC<RendererProps> = ({ primer }) => {
+export const RendererAndo: React.FC<RendererProps> = ({ primer: _primer }) => {
   return (
     <div 
       className="w-full h-screen flex items-center justify-center"
