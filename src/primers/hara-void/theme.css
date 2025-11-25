@@ -1,0 +1,94 @@
+/**
+ * Primer: Muji-Void
+ * Philosophy: 这是空。空即是可能性的容器。
+ * Constraint: No Brand Colors — Only Natural, Neutral Tones
+ * Inspiration: Muji / Kenya Hara / 無印良品
+ * 
+ * 无印良品设计哲学的数字化诠释：
+ * - 空不是"没有"，是"可能" / Emptiness is not absence, but possibility
+ * - 设计要消失，生活要前景 / Design fades, life comes forward
+ * - 自然的色彩，自然的呼吸 / Natural colors, natural breath
+ * - 间（Ma）— 留白的艺术 / Ma — the art of space
+ */
+
+:root[data-primer="hara-void"] {
+  /* === Color Palette (自然素材 — Colors Found in Nature) === */
+  --color-background: #F7F6F3;    /* 生成り / Unbleached Cotton */
+  --color-surface: #FFFEF9;       /* 白磁 / White Porcelain */
+  --color-surface-warm: #F5F3ED;  /* 和紙 / Washi Paper */
+  --color-text-main: #2D2D2D;     /* 墨 / Sumi Ink — 非纯黑 */
+  --color-text-muted: #7A7A7A;    /* 灰 / Ash */
+  --color-text-subtle: #A8A8A8;   /* 霧 / Mist */
+  --color-primary: #6B5344;       /* 焦茶 / Roasted Brown */
+  --color-secondary: #9C9689;     /* 礫石 / Gravel */
+  --color-accent: #C4B7A6;        /* 亜麻 / Linen */
+  --color-border: #E8E6E1;        /* 和紙の縁 / Washi Edge */
+  --color-border-subtle: #F0EEE9; /* 糸 / Thread */
+  
+  /* Natural Material Colors (自然素材色) */
+  --color-cotton: #FAF9F6;        /* 綿 / Cotton */
+  --color-bamboo: #D4C9B0;        /* 竹 / Bamboo */
+  --color-cedar: #8B7355;         /* 杉 / Cedar */
+  --color-clay: #BEB4A4;          /* 土 / Clay */
+  --color-stone: #9A9590;         /* 石 / Stone */
+  --color-bark: #5C4B3A;          /* 樹皮 / Bark */
+
+  /* === Typography (静謐な文字組み — Quiet Typography) === */
+  --font-family-display: "Hiragino Mincho ProN", "Noto Serif JP", "Georgia", serif;
+  --font-family-primary: "Hiragino Sans", "Noto Sans JP", "Helvetica Neue", sans-serif;
+  --font-family-mono: "SF Mono", "Menlo", monospace;
+  
+  /* Type Scale: 1.125 (Major Second) — 最温和的阶梯，变化几乎不可察觉 */
+  --font-size-xs: 0.79rem;     /* 12.6px */
+  --font-size-sm: 0.889rem;    /* 14.2px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-md: 1.125rem;    /* 18px */
+  --font-size-lg: 1.266rem;    /* 20.3px */
+  --font-size-xl: 1.424rem;    /* 22.8px */
+  --font-size-2xl: 1.602rem;   /* 25.6px */
+  --font-size-3xl: 1.802rem;   /* 28.8px */
+  --font-size-4xl: 2.027rem;   /* 32.4px */
+
+  --font-weight-light: 300;    /* 軽やか / Lightness */
+  --font-weight-normal: 400;   /* 普通 / Normal */
+  --font-weight-medium: 500;   /* 少し強調 / Slight emphasis */
+
+  --line-height-tight: 1.6;    /* 依然宽松 */
+  --line-height-base: 2.0;     /* 呼吸的空间 — 间（Ma） */
+  --line-height-relaxed: 2.4;  /* 诗歌般的留白 */
+
+  --letter-spacing-tight: 0.02em;
+  --letter-spacing-normal: 0.08em;  /* 日文排版需要更宽的字间 */
+  --letter-spacing-wide: 0.18em;
+
+  /* === Spacing (8px base — 呼吸的节奏) === */
+  --space-unit: 8px;
+  --space-xs: 8px;       /* 1× — 一息 */
+  --space-sm: 16px;      /* 2× — 小憩 */
+  --space-md: 32px;      /* 4× — 间 */
+  --space-lg: 64px;      /* 8× — 留白 */
+  --space-xl: 128px;     /* 16× — 空间 */
+  --space-2xl: 256px;    /* 32× — 虚空 */
+
+  /* === Layout (狭くて深い — Narrow and Deep) === */
+  --max-width: 720px;       /* 窄，让内容呼吸 */
+  --content-width: 580px;   /* 更窄的正文宽度 */
+  --grid-columns: 6;
+  --grid-gap: var(--space-lg);
+
+  /* === Interaction (如呼吸般缓慢 — Slow as Breath) === */
+  --transition-duration: 400ms;
+  --transition-timing: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --transition-slow: 800ms;  /* 极慢的过渡 */
+
+  /* === Surface Treatment (素材感 — Material Texture) === */
+  --border-radius: 1px;      /* 几乎没有，但不是完全没有 */
+  --box-shadow: none;        /* 无阴影 — 平面的诚实 */
+  --texture-paper: url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+  
+  /* === Constraint Enforcement (禁止品牌色) === */
+  --opacity: 1;
+  --gradient: none;          /* 无渐变 */
+  --saturated-color: none;   /* 禁止高饱和度 */
+  --pure-black: none;        /* 禁止纯黑 #000000 */
+}

@@ -1,0 +1,95 @@
+/**
+ * Primer: Rams-60
+ * Philosophy: "Weniger, aber besser." — Less, but better.
+ * Constraint: Zero Decorative Properties
+ * 
+ * 拉姆斯十原则的数字化诠释：
+ * - Good design is innovative / 好的设计是创新的
+ * - Good design makes a product useful / 好的设计使产品有用
+ * - Good design is aesthetic / 好的设计是美学的
+ * - Good design makes a product understandable / 好的设计使产品可理解
+ * - Good design is unobtrusive / 好的设计是不引人注目的
+ * - Good design is honest / 好的设计是诚实的
+ * - Good design is long-lasting / 好的设计是长久的
+ * - Good design is thorough down to the last detail / 好的设计对每个细节都深思熟虑
+ * - Good design is environmentally-friendly / 好的设计是环保的
+ * - Good design is as little design as possible / 好的设计是尽可能少的设计
+ */
+
+:root[data-primer="rams-60"] {
+  /* === Color Palette (Functional, Not Decorative) === */
+  --color-background: #F5F5F5;
+  --color-surface: #FFFFFF;
+  --color-surface-raised: #FAFAFA;
+  --color-text-main: #212121;
+  --color-text-muted: #757575;
+  --color-text-disabled: #9E9E9E;
+  --color-primary: #E64A19;        /* Braun Orange - The only accent */
+  --color-secondary: #757575;      /* Functional Gray */
+  --color-accent: #424242;         /* Deep Gray */
+  --color-border: #E0E0E0;
+  --color-border-strong: #BDBDBD;
+  
+  /* Functional Status Colors (Purposeful, not decorative) */
+  --color-success: #2E7D32;
+  --color-warning: #F57C00;
+  --color-error: #C62828;
+  --color-info: #1565C0;
+
+  /* === Typography (Clarity Above All) === */
+  --font-family-primary: "Helvetica Neue", "Inter", "Arial", sans-serif;
+  --font-family-mono: "SF Mono", "Roboto Mono", monospace;
+  
+  /* Type Scale: 1.200 (Minor Third) - Rational, Predictable */
+  --font-size-xs: 0.694rem;    /* 11.1px */
+  --font-size-sm: 0.833rem;    /* 13.3px */
+  --font-size-base: 1rem;      /* 16px - Optimal readability */
+  --font-size-md: 1.2rem;      /* 19.2px */
+  --font-size-lg: 1.44rem;     /* 23px */
+  --font-size-xl: 1.728rem;    /* 27.6px */
+  --font-size-2xl: 2.074rem;   /* 33.2px */
+  --font-size-3xl: 2.488rem;   /* 39.8px */
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.25;
+  --line-height-base: 1.5;      /* Optimal for body text */
+  --line-height-relaxed: 1.75;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.05em;
+
+  /* === Spacing (4px base unit — 博朗计算器般的精确) === */
+  --space-unit: 4px;
+  --space-xs: 4px;     /* 1 unit */
+  --space-sm: 8px;     /* 2 units */
+  --space-md: 12px;    /* 3 units */
+  --space-lg: 16px;    /* 4 units */
+  --space-xl: 24px;    /* 6 units */
+  --space-2xl: 32px;   /* 8 units */
+  --space-3xl: 48px;   /* 12 units */
+  --space-4xl: 64px;   /* 16 units */
+
+  /* === Layout (12-column grid — industrial precision) === */
+  --max-width: 1200px;
+  --content-width: 720px;
+  --grid-columns: 12;
+  --grid-gap: var(--space-lg);
+
+  /* === Interaction (Immediate response, no flourish) === */
+  --transition-duration: 0ms;
+  --transition-timing: linear;
+  --focus-outline: 2px solid var(--color-primary);
+  --focus-offset: 2px;
+
+  /* === Constraint Enforcement (Zero Decorative Properties) === */
+  --border-radius: 0;
+  --box-shadow: none;
+  --text-shadow: none;
+  --gradient: none;
+  --backdrop-filter: none;
+  --opacity: 1;
+}

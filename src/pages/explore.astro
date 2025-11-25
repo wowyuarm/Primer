@@ -1,0 +1,223 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// 所有可用的 Primers（按分类排序）
+// 1-3: 功能主义 | 4-5: 建筑空间 | 6-7: 艺术运动 | 8-10: 叙事氛围
+const primers = [
+  // === 功能主义/极简派 ===
+  { slug: 'rams-60', name: 'Rams-60', philosophy: '"Weniger, aber besser." — 工业设计的诚实与持久。', constraint: '零装饰属性', inspiration: 'Dieter Rams / 1960s Industrial', keywords: ['工业设计', '精密', '诚实', '持久'] },
+  { slug: 'vignelli-canon', name: 'Vignelli-Canon', philosophy: '设计是学科，不是自我表达。— 信息架构的统一。', constraint: '仅限一种字体家族', inspiration: 'Massimo Vignelli / Swiss Style', keywords: ['信息设计', '导视', '网格', '永恒'] },
+  { slug: 'hara-void', name: 'Hara-Void', philosophy: '这是空。— 空即是可能性的容器。', constraint: '禁止品牌色', inspiration: 'Kenya Hara / Emptiness', keywords: ['虚空', '自然', '朴素', '留白'] },
+  // === 建筑/空间派 ===
+  { slug: 'ando-concrete', name: 'Ando-Concrete', philosophy: '光、影与混凝土的诗意对话。', constraint: '色彩仅用于文本与交互', inspiration: 'Tadao Ando / Church of Light', keywords: ['极简主义', '结构感', '负空间', '静谧'] },
+  { slug: 'barragan-wall', name: 'Barragán-Wall', philosophy: '用色彩的体块，构建情感的空间。', constraint: '无透明度，无渐变', inspiration: 'Luis Barragán / Mexican Modernism', keywords: ['大胆', '情感', '雕塑感', '饱和度'] },
+  // === 艺术运动派 ===
+  { slug: 'mondrian-neoplast', name: 'Mondrian-Neoplast', philosophy: '抽象到本质，世界只需要垂直、水平与原色。', constraint: '仅限原色', inspiration: 'Piet Mondrian / De Stijl', keywords: ['抽象', '原色', '几何', '纯粹'] },
+  { slug: 'memphis-81', name: 'Memphis-81', philosophy: '对"好品味"规则的激进、幽默的颠覆。', constraint: '禁止常规对齐', inspiration: 'Ettore Sottsass / Postmodern', keywords: ['反叛', '玩味', '波普', '80年代'] },
+  // === 叙事/氛围派 ===
+  { slug: 'anderson-symmetry', name: 'Anderson-Symmetry', philosophy: '精心编排的对称与怀旧色调中的叙事。', constraint: '严格居中对称', inspiration: 'Wes Anderson / Cinematic Palette', keywords: ['对称', '怀旧', '精致', '故事感'] },
+  { slug: 'gatsby-deco', name: 'Gatsby-Deco', philosophy: '几何的精确、金色的奢华、仪式感与优雅。', constraint: '金色仅用于装饰', inspiration: 'Art Deco / Jazz Age', keywords: ['奢华', '几何', '金色', '爵士时代'] },
+  { slug: 'neon-noir', name: 'Neon-Noir', philosophy: '在黑暗中用光来引导与创造情绪。', constraint: '光暗比至少 1:7', inspiration: 'Cyberpunk Aesthetic / Syd Mead', keywords: ['赛博朋克', '霓虹', '暗色', '未来'] }
+];
+
+// 从 URL 获取初始 primer，如果没有则随机选择
+const url = Astro.url;
+const requestedPrimer = url.searchParams.get('primer');
+const defaultPrimer = requestedPrimer && primers.find(p => p.slug === requestedPrimer) 
+  ? requestedPrimer 
+  : primers[Math.floor(Math.random() * primers.length)].slug;
+
+const initialPrimer = primers.find(p => p.slug === defaultPrimer) || primers[0];
+const initialIndex = primers.findIndex(p => p.slug === defaultPrimer);
+---
+
+<BaseLayout defaultPrimer={defaultPrimer} title={`${initialPrimer.name} — Primer`}>
+  <main class="primer-stage">
+    <!-- Header -->
+    <header class="stage-header">
+      <div class="primer-identity">
+        <span class="primer-index">{String(initialIndex + 1).padStart(2, '0')}</span>
+        <h1 class="primer-name">{initialPrimer.name}</h1>
+      </div>
+      <nav class="stage-nav">
+        <a href="/" class="nav-link">← Home</a>
+      </nav>
+    </header>
+
+    <!-- Main Showcase Area -->
+    <section class="primer-showcase">
+      <!-- Left: Philosophy & Info -->
+      <div class="showcase-philosophy">
+        <blockquote class="primer-philosophy">
+          <span class="philosophy-text">{initialPrimer.philosophy.split('—')[0]?.trim()}</span>
+          {initialPrimer.philosophy.includes('—') && (
+            <span class="philosophy-translation">— {initialPrimer.philosophy.split('—')[1]?.trim()}</span>
+          )}
+        </blockquote>
+        <p class="primer-inspiration">
+          <span class="label">Inspired by</span>
+          <span class="value">{initialPrimer.inspiration}</span>
+        </p>
+        <div class="primer-constraint">
+          <span class="constraint-label">Constraint</span>
+          <span class="constraint-value">{initialPrimer.constraint}</span>
+        </div>
+        <div class="primer-keywords">
+          {initialPrimer.keywords.map(k => <span class="keyword">{k}</span>)}
+        </div>
+      </div>
+
+      <!-- Right: Living Styleguide Preview -->
+      <div class="showcase-styleguide">
+        <!-- Typography Showcase -->
+        <div class="styleguide-section typography-preview">
+          <h2 class="section-label">Typography</h2>
+          <div class="type-samples">
+            <h1 class="type-display">Display Heading</h1>
+            <h2 class="type-headline">Headline Text</h2>
+            <p class="type-body">Body text demonstrates the primary reading experience. Good typography is invisible — it lets the content speak.</p>
+            <p class="type-caption">Caption · Label · Meta</p>
+          </div>
+        </div>
+
+        <!-- Component Showcase -->
+        <div class="styleguide-section components-preview">
+          <h2 class="section-label">Components</h2>
+          <div class="component-grid">
+            <div class="component-group">
+              <button class="btn btn-primary">Primary Action</button>
+              <button class="btn btn-secondary">Secondary</button>
+              <button class="btn btn-ghost">Ghost Button</button>
+            </div>
+            
+            <div class="component-group">
+              <input type="text" class="input-field" placeholder="Text input field..." />
+            </div>
+
+            <div class="preview-card">
+              <h3 class="card-title">Card Component</h3>
+              <p class="card-text">Cards contain content and actions about a single subject.</p>
+              <div class="card-actions">
+                <button class="btn btn-primary btn-sm">Action</button>
+                <button class="btn btn-ghost btn-sm">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Extended Palette Preview -->
+        <div class="styleguide-section palette-preview">
+          <h2 class="section-label">Palette</h2>
+          <div class="color-grid">
+            <div class="color-row core-colors">
+              <div class="color-swatch swatch-bg" title="Background"></div>
+              <div class="color-swatch swatch-surface" title="Surface"></div>
+              <div class="color-swatch swatch-text" title="Text"></div>
+            </div>
+            <div class="color-row accent-colors">
+              <div class="color-swatch swatch-primary" title="Primary"></div>
+              <div class="color-swatch swatch-secondary" title="Secondary"></div>
+              <div class="color-swatch swatch-accent" title="Accent"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Effects & Patterns Preview -->
+        <div class="styleguide-section effects-preview">
+          <h2 class="section-label">Effects</h2>
+          <div class="effects-grid">
+            <div class="effect-demo shadow-demo" title="Shadow">
+              <span>Shadow</span>
+            </div>
+            <div class="effect-demo border-demo" title="Border">
+              <span>Border</span>
+            </div>
+            <div class="effect-demo radius-demo" title="Radius">
+              <span>Radius</span>
+            </div>
+            <div class="effect-demo animation-demo" title="Animation">
+              <span>Hover me</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Navigation -->
+    <footer class="stage-footer">
+      <div class="primer-nav-dots">
+        {primers.map((p, i) => (
+          <button 
+            class={`nav-dot ${p.slug === defaultPrimer ? 'active' : ''}`} 
+            data-index={i} 
+            data-slug={p.slug} 
+            aria-label={p.name} 
+          />
+        ))}
+      </div>
+      <p class="nav-hint">Use <kbd>←</kbd> <kbd>→</kbd> or click to navigate</p>
+    </footer>
+
+    <!-- Navigation Arrows -->
+    <button class="nav-arrow nav-prev" aria-label="上一个"><span>‹</span></button>
+    <button class="nav-arrow nav-next" aria-label="下一个"><span>›</span></button>
+
+    <!-- Dissect Trigger (floating) -->
+    <button class="dissect-trigger" aria-label="Dissect this Primer">
+      <span class="trigger-icon">+</span>
+      <span class="trigger-label">Dissect</span>
+    </button>
+
+    <!-- Dissect Overlay (detailed view) -->
+    <div class="dissect-overlay" hidden>
+      <div class="dissect-panel">
+        <button class="dissect-close" aria-label="Close">&times;</button>
+        <div class="dissect-content">
+          <article class="dissect-philosophy">
+            <h2 class="dissect-title">Philosophy</h2>
+            <p class="philosophy-body"></p>
+          </article>
+          <div class="dissect-elements">
+            <section class="element-section">
+              <h3 class="element-title">Palette</h3>
+              <div class="palette-grid"></div>
+            </section>
+            <section class="element-section">
+              <h3 class="element-title">Typography</h3>
+              <div class="typography-showcase"></div>
+            </section>
+            <section class="element-section">
+              <h3 class="element-title">Spacing</h3>
+              <div class="spacing-showcase"></div>
+            </section>
+            <section class="element-section">
+              <h3 class="element-title">Interaction States</h3>
+              <div class="interaction-showcase">
+                <button class="state-demo">Default</button>
+                <button class="state-demo hover">Hover</button>
+                <button class="state-demo active">Active</button>
+                <button class="state-demo" disabled>Disabled</button>
+              </div>
+            </section>
+          </div>
+        </div>
+        <div class="dissect-actions">
+          <h3 class="actions-title">Acquire Primer</h3>
+          <div class="action-buttons">
+            <button class="action-btn" data-action="copy-css"><span class="btn-icon">{ }</span><span>Copy CSS Variables</span></button>
+            <button class="action-btn" data-action="download-json"><span class="btn-icon">↓</span><span>Download JSON</span></button>
+            <button class="action-btn" data-action="copy-cli"><span class="btn-icon">$</span><span>CLI Command</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script define:vars={{ primers, initialIndex }}>
+    window.PRIMERS = primers;
+    window.INITIAL_INDEX = initialIndex;
+  </script>
+</BaseLayout>
+
+<style is:global>
+  @import "../styles/stage.css";
+</style>

@@ -1,0 +1,31 @@
+/**
+ * Primer: Gatsby-Deco
+ * Constraint: Gold for Decoration Only (Max 5%)
+ */
+
+:root[data-primer="gatsby-deco"] {
+  --color-background: #0A1628;
+  --color-surface: #132238;
+  --color-text-main: #F5F5F0;
+  --color-text-muted: #A8B5C4;
+  --color-primary: #D4AF37;
+  --color-gold: #D4AF37;
+  --color-secondary: #8B4D6E;
+  --color-border: #2A4060;
+  
+  --font-family-display: "Playfair Display", "Didot", "Georgia", serif;
+  --font-family-primary: "Lato", "Optima", sans-serif;
+  
+  --font-size-base: 1rem;
+  --font-size-md: 1.414rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 2.828rem;
+  
+  --space-unit: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 48px;
+  
+  --border-radius: 0;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}

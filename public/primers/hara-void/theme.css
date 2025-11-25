@@ -1,0 +1,78 @@
+/**
+ * Primer: Muji-Void
+ * Philosophy: 这是空。空即是可能性的容器。
+ * Constraint: No Brand Colors — Only Natural, Neutral Tones
+ * Inspiration: Muji / Kenya Hara / 無印良品
+ */
+
+:root {
+  /* === Color Palette (Natural Materials) === */
+  --color-background: #F7F6F3;
+  --color-surface: #FFFEF9;
+  --color-surface-warm: #F5F3ED;
+  --color-text-main: #2D2D2D;
+  --color-text-muted: #7A7A7A;
+  --color-text-subtle: #A8A8A8;
+  --color-primary: #6B5344;
+  --color-secondary: #9C9689;
+  --color-accent: #C4B7A6;
+  --color-border: #E8E6E1;
+  --color-border-subtle: #F0EEE9;
+  
+  /* Natural Material Colors */
+  --color-cotton: #FAF9F6;
+  --color-bamboo: #D4C9B0;
+  --color-cedar: #8B7355;
+  --color-clay: #BEB4A4;
+  --color-stone: #9A9590;
+
+  /* === Typography === */
+  --font-family-display: "Hiragino Mincho ProN", "Noto Serif JP", "Georgia", serif;
+  --font-family-primary: "Hiragino Sans", "Noto Sans JP", "Helvetica Neue", sans-serif;
+  --font-family-mono: "SF Mono", "Menlo", monospace;
+  
+  /* Type Scale: 1.125 (Major Second) — Gentle Hierarchy */
+  --font-size-xs: 0.79rem;
+  --font-size-sm: 0.889rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.266rem;
+  --font-size-xl: 1.424rem;
+  --font-size-2xl: 1.602rem;
+  --font-size-3xl: 1.802rem;
+
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+
+  --line-height-tight: 1.6;
+  --line-height-base: 2.0;
+  --line-height-relaxed: 2.4;
+
+  --letter-spacing-tight: 0.02em;
+  --letter-spacing-normal: 0.08em;
+  --letter-spacing-wide: 0.18em;
+
+  /* === Spacing (8px base, breathing room) === */
+  --space-unit: 8px;
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 32px;
+  --space-lg: 64px;
+  --space-xl: 128px;
+  --space-2xl: 256px;
+
+  /* === Layout === */
+  --max-width: 720px;
+  --content-width: 580px;
+  --grid-columns: 6;
+  --grid-gap: var(--space-lg);
+
+  /* === Interaction === */
+  --transition-duration: 400ms;
+  --transition-timing: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* === Surface Treatment === */
+  --border-radius: 1px;
+  --box-shadow: none;
+}

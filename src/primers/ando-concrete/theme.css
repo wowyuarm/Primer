@@ -1,0 +1,93 @@
+/**
+ * Primer: Ando-Concrete
+ * Philosophy: 光、影与混凝土的诗意对话
+ * Constraint: Color for Text & Interaction Only, Never for Surfaces
+ * 
+ * 安藤忠雄清水混凝土建筑的数字化诠释：
+ * - 光的雕塑 / Light as sculpture
+ * - 影的诗意 / Poetry of shadow
+ * - 空间的呼吸 / Breathing of space
+ * - 材质的诚实 / Honesty of material
+ */
+
+:root[data-primer="ando-concrete"] {
+  /* === Color Palette (Five Levels of Concrete — 五阶清水混凝土) === */
+  --color-background: #C9C9C9;    /* 混凝土墙体 / Concrete Wall */
+  --color-surface: #D8D8D8;       /* 混凝土面板 / Concrete Panel */
+  --color-surface-light: #E5E5E5; /* 受光面 / Sunlit Surface */
+  --color-surface-shadow: #A8A8A8; /* 阴影区 / Shadowed Area */
+  --color-surface-deep: #909090;  /* 深阴影 / Deep Shadow */
+  
+  --color-text-main: #2A2A2A;     /* 墨黑 / Ink Black */
+  --color-text-muted: #6B6B6B;    /* 石灰 / Limestone */
+  --color-text-subtle: #9A9A9A;   /* 远山 / Distant Mountain */
+  
+  --color-primary: #3D7EAA;        /* 交互蓝 / Interaction Blue — 唯一的色彩 */
+  --color-secondary: #5A5A5A;      /* 混凝土深灰 / Deep Concrete */
+  --color-accent: #8A8A8A;         /* 混凝土浅灰 / Light Concrete */
+  --color-border: #B8B8B8;        /* 模板线 / Form Line */
+  --color-border-subtle: #D0D0D0; /* 细微接缝 / Subtle Seam */
+  
+  /* Light & Shadow Variables (光与影的变量) */
+  --light-direction: 135deg;
+  --shadow-ambient: rgba(0, 0, 0, 0.05);
+  --shadow-cast: rgba(0, 0, 0, 0.15);
+  --light-highlight: rgba(255, 255, 255, 0.08);
+
+  /* === Typography (建筑铭文般的存在) === */
+  --font-family-display: "Cormorant Garamond", "Noto Serif JP", "Georgia", serif;
+  --font-family-primary: "Avenir Next", "Avenir", "Noto Sans JP", sans-serif;
+  --font-family-mono: "JetBrains Mono", "SF Mono", monospace;
+  
+  /* Type Scale: 1.414 (Augmented Fourth) - 戏剧性的对比 */
+  --font-size-xs: 0.5rem;      /* 8px */
+  --font-size-sm: 0.707rem;    /* 11.3px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-md: 1.414rem;    /* 22.6px */
+  --font-size-lg: 2rem;        /* 32px */
+  --font-size-xl: 2.827rem;    /* 45.2px */
+  --font-size-2xl: 4rem;       /* 64px */
+  --font-size-3xl: 5.653rem;   /* 90.4px */
+
+  --font-weight-light: 300;    /* 呼吸 */
+  --font-weight-normal: 400;   /* 存在 */
+  --font-weight-medium: 500;   /* 强调 */
+
+  --line-height-tight: 1.3;
+  --line-height-base: 1.7;     /* 留白如建筑中的空间 */
+  --line-height-relaxed: 2.2;
+
+  --letter-spacing-tight: -0.01em;
+  --letter-spacing-normal: 0.02em;
+  --letter-spacing-wide: 0.12em;    /* 标题的呼吸感 */
+  --letter-spacing-dramatic: 0.25em; /* 纪念碑式 */
+
+  /* === Spacing (8px base unit, geometric progression — 几何倍增) === */
+  --space-unit: 8px;
+  --space-xs: 8px;       /* 1× */
+  --space-sm: 16px;      /* 2× */
+  --space-md: 32px;      /* 4× */
+  --space-lg: 64px;      /* 8× */
+  --space-xl: 128px;     /* 16× — 光之教堂的窗缝 */
+  --space-2xl: 256px;    /* 32× — 庭院的虚空 */
+
+  /* === Layout (留白是最重要的元素) === */
+  --max-width: 900px;
+  --content-width: 600px;
+  --grid-columns: 6;
+  --grid-gap: var(--space-md);
+
+  /* === Interaction (缓慢，如光线移动) === */
+  --transition-duration: 500ms;
+  --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* === Surface Treatment (清水混凝土的质感) === */
+  --border-radius: 0;
+  --box-shadow: none;
+  --surface-texture: linear-gradient(
+    var(--light-direction),
+    var(--light-highlight) 0%,
+    transparent 50%,
+    var(--shadow-ambient) 100%
+  );
+}

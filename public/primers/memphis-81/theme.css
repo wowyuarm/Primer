@@ -1,0 +1,84 @@
+/**
+ * Primer: Memphis-81
+ * Philosophy: 对'好品味'规则的激进、幽默的颠覆
+ * Constraint: Conventional Alignment is Forbidden
+ */
+
+:root {
+  /* === Color Palette (The Memphis Rebellion) === */
+  --color-background: #FDE849;
+  --color-surface: #FFFFFF;
+  --color-surface-alt: #000000;
+  --color-text-main: #000000;
+  --color-text-muted: #333333;
+  --color-text-inverse: #FFFFFF;
+  
+  /* The Memphis Six */
+  --color-primary: #26ABE2;
+  --color-accent-a: #F15A24;
+  --color-accent-b: #ED1E79;
+  --color-accent-c: #8DC63F;
+  --color-accent-d: #9E5FC2;
+  --color-accent-e: #00CED1;
+  --color-border: #000000;
+
+  /* === Typography === */
+  --font-family-display: "Cooper Black", "Rockwell Extra Bold", "Impact", serif;
+  --font-family-primary: "Poppins", "Futura", "Arial Black", sans-serif;
+  --font-family-mono: "Courier New", "Monaco", monospace;
+  
+  /* Type Scale: IRREGULAR (Intentionally Broken) */
+  --font-size-xs: 0.7rem;
+  --font-size-sm: 0.9rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.6rem;
+  --font-size-lg: 2.7rem;
+  --font-size-xl: 4.2rem;
+  --font-size-2xl: 7rem;
+  --font-size-3xl: 12rem;
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --line-height-tight: 0.85;
+  --line-height-base: 1.15;
+  --line-height-relaxed: 1.4;
+
+  --letter-spacing-tight: -0.06em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.12em;
+  --letter-spacing-wild: 0.25em;
+
+  /* === Spacing (Deliberately Irregular) === */
+  --space-unit: 8px;
+  --space-xs: 7px;
+  --space-sm: 15px;
+  --space-md: 26px;
+  --space-lg: 52px;
+  --space-xl: 99px;
+  --space-2xl: 163px;
+
+  /* === Layout === */
+  --max-width: 1600px;
+  --grid-columns: 7;
+  --grid-gap: var(--space-md);
+
+  /* === Interaction === */
+  --transition-duration: 180ms;
+  --transition-timing: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* === Surface Treatment === */
+  --border-radius: 0;
+  --border-width: 4px;
+  --box-shadow: 6px 6px 0 #000000;
+
+  /* === Memphis Patterns === */
+  --pattern-dots: radial-gradient(circle, #000 2px, transparent 2px);
+  --pattern-zigzag: repeating-linear-gradient(135deg, transparent, transparent 8px, #000 8px, #000 10px);
+  
+  /* === Rotation Variables === */
+  --rotate-slight: 2deg;
+  --rotate-medium: 5deg;
+  --rotate-wild: 12deg;
+}

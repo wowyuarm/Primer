@@ -1,0 +1,119 @@
+/**
+ * Primer: Memphis-81
+ * Philosophy: 对'好品味'规则的激进、幽默的颠覆
+ * Constraint: Conventional Alignment is Forbidden
+ * 
+ * 孟菲斯设计运动的数字化诠释：
+ * - 规则就是用来打破的 / Rules are meant to be broken
+ * - 色彩碰撞是美德 / Color clash is virtue
+ * - 不对称是常态 / Asymmetry is the norm
+ * - 玩味即严肃 / Playfulness is serious
+ */
+
+:root[data-primer="memphis-81"] {
+  /* === Color Palette (The Memphis Rebellion — 孟菲斯反叛色板) === */
+  --color-background: #FDE849;     /* 电光黄 / Electric Yellow */
+  --color-surface: #FFFFFF;        /* 纯白 / Pure White */
+  --color-surface-alt: #000000;    /* 纯黑 / Pure Black */
+  --color-text-main: #000000;      /* 黑墨 / Black Ink */
+  --color-text-muted: #333333;     /* 深灰 / Charcoal */
+  --color-text-inverse: #FFFFFF;   /* 反白 / Inverse */
+  
+  /* The Memphis Six (孟菲斯六色) */
+  --color-primary: #26ABE2;        /* 电光蓝 / Electric Blue */
+  --color-secondary: #F15A24;      /* 火焰橙 / Flame Orange */
+  --color-accent: #ED1E79;         /* 霓虹粉 / Neon Pink */
+  --color-accent-a: var(--color-secondary);
+  --color-accent-b: var(--color-accent);
+  --color-accent-c: #8DC63F;       /* 酸性绿 / Acid Green */
+  --color-accent-d: #9E5FC2;       /* 紫罗兰 / Violet */
+  --color-accent-e: #00CED1;       /* 青绿 / Turquoise */
+  --color-border: #000000;
+  
+  /* Clash Combinations (碰撞组合) */
+  --clash-hot: var(--color-accent-a);
+  --clash-cool: var(--color-primary);
+  --clash-wild: var(--color-accent-b);
+
+  /* === Typography (反叛的排印) === */
+  --font-family-display: "Cooper Black", "Rockwell Extra Bold", "Impact", serif;
+  --font-family-primary: "Poppins", "Futura", "Arial Black", sans-serif;
+  --font-family-quirky: "Comic Sans MS", "Marker Felt", cursive; /* 故意的 */
+  --font-family-mono: "Courier New", "Monaco", monospace;
+  
+  /* Type Scale: IRREGULAR (Intentionally Broken — 故意打破规则) */
+  --font-size-xs: 0.7rem;      /* 11.2px */
+  --font-size-sm: 0.9rem;      /* 14.4px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-md: 1.6rem;      /* 25.6px — 不是1.5 */
+  --font-size-lg: 2.7rem;      /* 43.2px — 故意的不规则 */
+  --font-size-xl: 4.2rem;      /* 67.2px */
+  --font-size-2xl: 7rem;       /* 112px */
+  --font-size-3xl: 12rem;      /* 192px — 巨型冲击 */
+
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --line-height-tight: 0.85;   /* 紧到几乎重叠 */
+  --line-height-base: 1.15;
+  --line-height-relaxed: 1.4;
+
+  --letter-spacing-tight: -0.06em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.12em;
+  --letter-spacing-wild: 0.25em;
+
+  /* === Spacing (Deliberately Irregular — 故意不规则) === */
+  --space-unit: 8px;
+  --space-xs: 7px;       /* 不是8 */
+  --space-sm: 15px;      /* 不是16 */
+  --space-md: 26px;      /* 不是24 */
+  --space-lg: 52px;      /* 不是48 */
+  --space-xl: 99px;      /* 不是96 */
+  --space-2xl: 163px;    /* 故意的奇数 */
+
+  /* === Layout (Unruly grid — 不羁的网格) === */
+  --max-width: 1600px;
+  --grid-columns: 7;      /* 奇数！故意的 */
+  --grid-gap: var(--space-md);
+
+  /* === Interaction (Bouncy & Playful — 弹跳玩味) === */
+  --transition-duration: 180ms;
+  --transition-timing: cubic-bezier(0.68, -0.55, 0.265, 1.55); /* 过冲弹跳 */
+  --transition-timing-wild: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* === Surface Treatment (Bold & Graphic — 大胆图形化) === */
+  --border-radius: 0;
+  --border-width: 4px;
+  --border-style: solid;
+  --box-shadow: 6px 6px 0 #000000;
+  --box-shadow-colored: 6px 6px 0 var(--color-accent-b);
+  --box-shadow-double: 
+    4px 4px 0 var(--color-primary),
+    8px 8px 0 #000000;
+
+  /* === Memphis Patterns (孟菲斯图案库) === */
+  --pattern-dots: radial-gradient(circle, #000 2px, transparent 2px);
+  --pattern-dots-size: 16px 16px;
+  
+  --pattern-squiggle: url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' fill='%23000000' fill-rule='evenodd'/%3E%3C/svg%3E");
+  
+  --pattern-terrazzo: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='25' cy='25' r='8' fill='%2326ABE2'/%3E%3Crect x='60' y='15' width='15' height='8' fill='%23F15A24' transform='rotate(45 67 19)'/%3E%3Ccircle cx='75' cy='65' r='6' fill='%23ED1E79'/%3E%3Crect x='10' y='70' width='20' height='6' fill='%238DC63F' transform='rotate(-30 20 73)'/%3E%3C/svg%3E");
+  
+  --pattern-zigzag: repeating-linear-gradient(
+    135deg,
+    transparent,
+    transparent 8px,
+    #000 8px,
+    #000 10px
+  );
+  
+  --pattern-confetti: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='5' y='5' width='8' height='3' fill='%23ED1E79' transform='rotate(45 9 6.5)'/%3E%3Crect x='40' y='20' width='8' height='3' fill='%2326ABE2' transform='rotate(-30 44 21.5)'/%3E%3Crect x='20' y='40' width='8' height='3' fill='%238DC63F' transform='rotate(60 24 41.5)'/%3E%3C/svg%3E");
+
+  /* === Rotation Variables (旋转角度) === */
+  --rotate-slight: 2deg;
+  --rotate-medium: 5deg;
+  --rotate-wild: 12deg;
+  --rotate-crazy: -8deg;
+}

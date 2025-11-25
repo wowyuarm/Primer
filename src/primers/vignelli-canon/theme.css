@@ -1,0 +1,90 @@
+/**
+ * Primer: Vignelli-Canon
+ * Philosophy: 设计是学科，不是自我表达。信息清晰度至上。
+ * Constraint: Single Typeface Family Only
+ * Inspiration: Massimo Vignelli / Swiss International Style
+ * 
+ * 瑞士国际主义风格的数字化诠释：
+ * - 网格即骨架 / The grid is the skeleton
+ * - Helvetica 即语言 / Helvetica is the language
+ * - 少即是多（真正的少）/ Less is more (truly less)
+ * - 信息即美学 / Information is aesthetic
+ */
+
+:root[data-primer="vignelli-canon"] {
+  /* === Color Palette (Black, White, Red — 黑白红三色) === */
+  --color-background: #FFFFFF;     /* 纯白 / Pure White */
+  --color-surface: #FFFFFF;        /* 同样纯白，无层次差异 */
+  --color-surface-inverse: #000000; /* 纯黑 / Pure Black */
+  --color-text-main: #000000;      /* 纯黑，非近黑 / Pure Black */
+  --color-text-muted: #000000;     /* 依然是黑，通过字重区分 */
+  --color-text-subtle: #000000;    /* 禁止灰色文字 */
+  --color-text-inverse: #FFFFFF;   /* 反白 / Inverse */
+  --color-primary: #FF0000;        /* Vignelli 红，仅用于警示 / Warning Only */
+  --color-border: #000000;         /* 黑色网格线 / Black Grid */
+  --color-border-strong: #000000;  /* 同样黑色 */
+  
+  /* NO GRAYS - Vignelli 禁止灰色 */
+  /* 层级通过字重和大小表达，不通过色彩淡化 */
+
+  /* === Typography (Helvetica Only — 仅限 Helvetica) === */
+  --font-family-primary: "Helvetica Neue", "Helvetica", "Inter", "Arial", sans-serif;
+  --font-family-display: var(--font-family-primary);  /* 同一字体 */
+  --font-family-mono: "SF Mono", "Menlo", monospace;
+  
+  /* Type Scale: 1.333 (Perfect Fourth) — 经典的音程 */
+  --font-size-xs: 0.563rem;    /* 9px */
+  --font-size-sm: 0.75rem;     /* 12px */
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-md: 1.333rem;    /* 21.3px */
+  --font-size-lg: 1.777rem;    /* 28.4px */
+  --font-size-xl: 2.369rem;    /* 37.9px */
+  --font-size-2xl: 3.157rem;   /* 50.5px */
+  --font-size-3xl: 4.209rem;   /* 67.3px */
+  --font-size-4xl: 5.61rem;    /* 89.8px */
+
+  /* Five Weights Only (仅限五种字重) */
+  --font-weight-light: 300;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --line-height-tight: 1.1;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.8;
+
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.08em;
+  --letter-spacing-caps: 0.15em;   /* 大写字母专用 */
+
+  /* === Spacing (8px base — 网格基准) === */
+  --space-unit: 8px;
+  --space-xs: 8px;       /* 1× */
+  --space-sm: 16px;      /* 2× */
+  --space-md: 24px;      /* 3× */
+  --space-lg: 32px;      /* 4× */
+  --space-xl: 48px;      /* 6× */
+  --space-2xl: 64px;     /* 8× */
+  --space-3xl: 96px;     /* 12× */
+  --space-4xl: 128px;    /* 16× */
+
+  /* === Layout (12-Column Grid — 12列网格) === */
+  --max-width: 1200px;
+  --content-width: 800px;
+  --grid-columns: 12;
+  --grid-gap: var(--space-md);
+  --grid-margin: var(--space-xl);
+
+  /* === Interaction (Swift & Invisible — 迅速且无感) === */
+  --transition-duration: 150ms;
+  --transition-timing: ease-out;
+
+  /* === Constraint Enforcement (严格约束) === */
+  --border-radius: 0;              /* 无圆角 */
+  --box-shadow: none;              /* 无阴影 */
+  --gradient: none;                /* 无渐变 */
+  --decoration: none;              /* 无装饰 */
+  --secondary-typeface: forbidden; /* 禁止第二字体 */
+}

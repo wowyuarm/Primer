@@ -1,0 +1,63 @@
+/**
+ * Primer: Rams-60
+ * Philosophy: "Weniger, aber besser." — Less, but better.
+ * Constraint: Zero Decorative Properties
+ */
+
+:root {
+  /* === Color Palette (Functional, Not Decorative) === */
+  --color-background: #F5F5F5;
+  --color-surface: #FFFFFF;
+  --color-surface-raised: #FAFAFA;
+  --color-text-main: #212121;
+  --color-text-muted: #757575;
+  --color-text-disabled: #9E9E9E;
+  --color-primary: #E64A19;
+  --color-border: #E0E0E0;
+  --color-border-strong: #BDBDBD;
+  
+  /* Functional Status Colors */
+  --color-success: #2E7D32;
+  --color-warning: #F57C00;
+  --color-error: #C62828;
+  --color-info: #1565C0;
+
+  /* === Typography === */
+  --font-family-primary: "Helvetica Neue", "Inter", "Arial", sans-serif;
+  --font-family-mono: "SF Mono", "Roboto Mono", monospace;
+  
+  /* Type Scale: 1.200 (Minor Third) */
+  --font-size-xs: 0.694rem;
+  --font-size-sm: 0.833rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.2rem;
+  --font-size-lg: 1.44rem;
+  --font-size-xl: 1.728rem;
+  --font-size-2xl: 2.074rem;
+  --font-size-3xl: 2.488rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.25;
+  --line-height-base: 1.5;
+  --line-height-relaxed: 1.75;
+
+  /* === Spacing (4px base unit, linear) === */
+  --space-unit: 4px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 24px;
+  --space-2xl: 32px;
+  --space-3xl: 48px;
+  --space-4xl: 64px;
+
+  /* === Constraint Enforcement (Zero Decorative Properties) === */
+  --border-radius: 0;
+  --box-shadow: none;
+  --text-shadow: none;
+  --transition-duration: 0ms;
+}

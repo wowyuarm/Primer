@@ -1,0 +1,77 @@
+/**
+ * Primer: Barragán-Wall
+ * Philosophy: 用色彩的体块，构建情感的空间
+ * Constraint: No Opacity, No Gradients
+ */
+
+:root {
+  /* === Color Palette (The Barragán Palette) === */
+  --color-background: #ED3D95;
+  --color-surface: #F5A623;
+  --color-text-main: #FFFFFF;
+  --color-text-muted: #FFF8F0;
+  --color-primary: #0057A8;
+  --color-secondary: #7B2D8E;
+  --color-border: #FFFFFF;
+  
+  /* Extended Barragán Colors */
+  --color-terracotta: #C75B39;
+  --color-ochre: #CC8B2D;
+  --color-coral: #FF6B5B;
+  --color-azure: #3A7CA5;
+  --color-magenta: #B8336A;
+  --color-lavender: #9B6B9E;
+
+  /* === Typography === */
+  --font-family-display: "Montserrat", "Bebas Neue", "Impact", sans-serif;
+  --font-family-primary: "Montserrat", "Arial Black", sans-serif;
+  --font-family-mono: "Space Mono", "Courier New", monospace;
+  
+  /* Type Scale: 1.618 (Golden Ratio) */
+  --font-size-xs: 0.618rem;
+  --font-size-sm: 0.786rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.618rem;
+  --font-size-lg: 2.618rem;
+  --font-size-xl: 4.236rem;
+  --font-size-2xl: 6.854rem;
+  --font-size-3xl: 11.089rem;
+
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  --line-height-tight: 0.9;
+  --line-height-base: 1.2;
+  --line-height-relaxed: 1.4;
+
+  --letter-spacing-tight: -0.04em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.1em;
+  --letter-spacing-mega: 0.3em;
+
+  /* === Spacing (10px base unit, rhythmic) === */
+  --space-unit: 10px;
+  --space-xs: 10px;
+  --space-sm: 20px;
+  --space-md: 40px;
+  --space-lg: 80px;
+  --space-xl: 160px;
+  --space-2xl: 320px;
+
+  /* === Layout === */
+  --max-width: 1400px;
+  --grid-columns: 4;
+  --grid-gap: var(--space-md);
+
+  /* === Interaction === */
+  --transition-duration: 0ms;
+  --transition-timing: step-end;
+
+  /* === Constraint Enforcement === */
+  --border-radius: 0;
+  --box-shadow: none;
+  --opacity: 1;
+  --gradient: none;
+}

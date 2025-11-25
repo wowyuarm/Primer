@@ -1,0 +1,162 @@
+---
+/**
+ * About Page
+ * 纯黑白排版，无主题依赖
+ */
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Primer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <main class="about-page">
+    <nav class="about-nav">
+      <a href="/" class="back-link">← Back</a>
+    </nav>
+
+    <article class="about-content">
+      <header>
+        <h1>About Primer</h1>
+      </header>
+
+      <section>
+        <p>
+          Primer 是一个反库（Anti-Library）—— 一组有态度的设计系统集合，
+          拒绝AI生成的审美平庸。
+        </p>
+        <p>
+          每个 Primer 都是一个完整的哲学宇宙：有它的叙事核心、系统规则、
+          和标志性约束。我们不提供零件，我们提供世界观。
+        </p>
+      </section>
+
+      <section>
+        <h2>使用方式</h2>
+        <ol>
+          <li>浏览并体验各个设计系统</li>
+          <li>点击 Dissect 查看完整的设计 token</li>
+          <li>复制 CSS 变量或下载 JSON 到你的项目</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>技术栈</h2>
+        <p>
+          Primer 使用 Astro 构建，零运行时依赖。
+          每个主题都是纯 CSS 变量，可以直接复制到任何项目。
+        </p>
+      </section>
+    </article>
+
+    <footer class="about-footer">
+      <p>Primer © 2025</p>
+      <a href="/explore" class="explore-link">Explore Primers →</a>
+    </footer>
+  </main>
+</body>
+</html>
+
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    min-height: 100vh;
+    background: #FAFAFA;
+    color: #1A1A1A;
+    font-family: "Inter", system-ui, sans-serif;
+    line-height: 1.6;
+  }
+
+  .about-page {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 48px 24px;
+  }
+
+  .about-nav {
+    margin-bottom: 64px;
+  }
+
+  .back-link {
+    font-size: 0.875rem;
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+  .back-link:hover {
+    opacity: 1;
+  }
+
+  .about-content h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 32px;
+    letter-spacing: -0.02em;
+  }
+
+  .about-content h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 48px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.5;
+  }
+
+  .about-content section {
+    margin-bottom: 32px;
+  }
+
+  .about-content p {
+    margin-bottom: 16px;
+    opacity: 0.8;
+  }
+
+  .about-content ol {
+    padding-left: 24px;
+    margin-top: 8px;
+  }
+
+  .about-content li {
+    margin-bottom: 8px;
+    opacity: 0.8;
+  }
+
+  .about-footer {
+    margin-top: 80px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    opacity: 0.5;
+  }
+
+  .explore-link {
+    color: inherit;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .explore-link:hover {
+    opacity: 1;
+  }
+</style>

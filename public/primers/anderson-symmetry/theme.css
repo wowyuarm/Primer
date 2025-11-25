@@ -1,0 +1,81 @@
+/**
+ * Primer: Anderson-Symmetry
+ * Philosophy: 精心编排的对称与怀旧色调中的叙事
+ * Constraint: Major Components Must Be Strictly Symmetrical
+ */
+
+:root {
+  /* === Color Palette (The Anderson Palette) === */
+  --color-background: #F3E5AB;
+  --color-surface: #E6D4A0;
+  --color-surface-elevated: #FDF6E3;
+  --color-text-main: #5C4B51;
+  --color-text-muted: #A28C7D;
+  --color-primary: #D1495B;
+  --color-secondary: #6B9080;
+  --color-border: #C9B896;
+  
+  /* Extended Anderson Colors */
+  --color-blush: #F5C6C6;
+  --color-dusty-rose: #D4A5A5;
+  --color-powder-blue: #A8C5D9;
+  --color-seafoam: #9DC5BB;
+  --color-mustard: #E4B363;
+  --color-terracotta: #C97B63;
+  --color-lavender: #C5B3C8;
+  --color-mint: #B8D8C7;
+
+  /* === Typography === */
+  --font-family-display: "Futura PT", "Futura", "Century Gothic", sans-serif;
+  --font-family-primary: "Libre Baskerville", "Playfair Display", "Georgia", serif;
+  --font-family-script: "Tangerine", "Parisienne", cursive;
+  --font-family-mono: "Courier New", "American Typewriter", monospace;
+  
+  /* Type Scale: 1.250 (Major Third) */
+  --font-size-xs: 0.64rem;
+  --font-size-sm: 0.8rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.25rem;
+  --font-size-lg: 1.563rem;
+  --font-size-xl: 1.953rem;
+  --font-size-2xl: 2.441rem;
+  --font-size-3xl: 3.052rem;
+  --font-size-4xl: 3.815rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-base: 1.6;
+  --line-height-relaxed: 1.9;
+
+  --letter-spacing-tight: 0;
+  --letter-spacing-normal: 0.03em;
+  --letter-spacing-wide: 0.12em;
+  --letter-spacing-title: 0.2em;
+
+  /* === Spacing (5px base unit, regular) === */
+  --space-unit: 5px;
+  --space-xs: 5px;
+  --space-sm: 10px;
+  --space-md: 20px;
+  --space-lg: 40px;
+  --space-xl: 80px;
+  --space-2xl: 160px;
+
+  /* === Layout === */
+  --max-width: 1000px;
+  --content-width: 680px;
+  --grid-columns: 12;
+  --grid-gap: var(--space-md);
+
+  /* === Interaction === */
+  --transition-duration: 300ms;
+  --transition-timing: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+
+  /* === Surface Treatment === */
+  --border-radius: 3px;
+  --box-shadow: 0 2px 8px rgba(92, 75, 81, 0.08);
+  --box-shadow-elevated: 0 4px 16px rgba(92, 75, 81, 0.12);
+}
