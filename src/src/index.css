@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* === Base Reset === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-background, #FAFAFA);
+  color: var(--color-text-main, #1A1A1A);
+  font-family: var(--font-body, 'Inter', system-ui, sans-serif);
+  transition: background-color 0.6s ease, color 0.6s ease;
+}
+
+/* === Selection Color: Theme-aware === */
+::selection {
+  background: var(--color-primary, #E64A19);
+  color: var(--color-background, #FFFFFF);
+}
+
+::-moz-selection {
+  background: var(--color-primary, #E64A19);
+  color: var(--color-background, #FFFFFF);
+}
+
+/* === Scrollbar: Theme-aware === */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-text-muted);
+  opacity: 0.5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* === CSS Variable Defaults (overridden per Primer) === */
+:root {
+  --color-background: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-text-main: #1A1A1A;
+  --color-text-muted: #757575;
+  --color-primary: #E64A19;
+  --color-accent: #424242;
+  --color-secondary: #757575;
+  
+  --font-display: 'Inter', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  
+  --radius: 0px;
+  --shadow: none;
+  --transition: all 0.2s ease;
+  --transition-timing: ease;
+}
+
+/* === Utility: Hide scrollbar but allow scroll === */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* === Animation keyframes === */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease forwards;
+}
+
+/* === Primer-Specific Global Overrides === */
+
+/* Rams-60: Zero decoration, no hover flourish */
+:root[data-primer="rams-60"] button:hover {
+  transform: none !important;
+}
+
+/* Memphis-81: Playful chaos */
+:root[data-primer="memphis-81"] {
+  --pattern-confetti: radial-gradient(circle, #000 1px, transparent 1px);
+}
+
+/* Neon-Noir: Scanlines overlay */
+:root[data-primer="neon-noir"] {
+  --scanline: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255,255,255,0.03) 2px,
+    rgba(255,255,255,0.03) 4px
+  );
+}
+
+/* Brutalist-Terminal: Cursor blink */
+@keyframes cursor-blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Neon flicker */
+@keyframes neon-flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { opacity: 1; }
+  20%, 24%, 55% { opacity: 0.6; }
+}

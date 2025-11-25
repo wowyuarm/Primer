@@ -1,0 +1,14 @@
+/**
+ * Brutalist-Terminal Theme (Public/Simplified)
+ */
+:root[data-primer="brutalist-terminal"] {
+  --color-background: #0C0C0C;
+  --color-surface: #121212;
+  --color-text-main: #CCCCCC;
+  --color-text-muted: #888888;
+  --color-primary: #FFB000;
+  --color-border: #333333;
+  --font-primary: "IBM Plex Mono", Consolas, monospace;
+  --border-radius: 0;
+  --transition-duration: 0ms;
+}

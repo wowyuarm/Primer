@@ -8,21 +8,28 @@
 
 ## Philosophy
 
-在一个被AI直出内容统治的时代，蓝紫渐变已经成为平庸与无意识的代名词。Primer的存在，是对这种审美惯性的无声抗议。
+In an era dominated by AI-generated content, the blue-purple gradient has become synonymous with mediocrity and thoughtlessness. Primer exists as a silent protest against aesthetic inertia.
 
-我们不"挑选"风格，我们**蒸馏**它们。每一个Primer都是一个完整的世界——一个有其内在逻辑和情感主张的微型宇宙。
+We don't "pick" styles — we **distill** them. Each Primer is a complete world — a micro-universe with its own internal logic and emotional stance.
 
 ---
 
-## Design Systems
+## Design Systems (12 Primers)
 
 | Primer | Philosophy | Constraint |
 |--------|-----------|------------|
-| **Rams-60** | "Weniger, aber besser." | 零装饰属性 |
-| **Ando-Concrete** | 光、影与混凝土的诗意对话 | 色彩仅用于文本与交互 |
-| **Barragán-Wall** | 用色彩的体块，构建情感的空间 | 无透明度，无渐变 |
-| **Anderson-Symmetry** | 精心编排的对称与怀旧色调 | 严格居中对称 |
-| **Memphis-81** | 对"好品味"规则的激进颠覆 | 禁止常规对齐 |
+| **Rams-60** | "Less, but better." | Zero decorative properties |
+| **Vignelli-Canon** | Design is discipline, not self-expression | Single typeface family only |
+| **Hara-Void** | Emptiness is the container of possibility | No brand colors |
+| **Ando-Concrete** | Poetic dialogue of light, shadow, and concrete | Color only for text & interaction |
+| **Barragán-Wall** | Building emotional spaces with color blocks | No opacity, no gradients |
+| **Mondrian-Neoplast** | The world needs only vertical, horizontal, and primary | Primary colors only |
+| **Memphis-81** | Radical subversion of "good taste" | Anti-alignment required |
+| **Anderson-Symmetry** | Curated symmetry and nostalgic tones | Strict center alignment |
+| **Gatsby-Deco** | Geometric precision, golden luxury | Gold for decoration only |
+| **Neon-Noir** | Using light to guide mood in darkness | Light-dark ratio min 1:7 |
+| **Tufte-Margin** | Data speaks, interface recedes | No large background colors |
+| **Brutalist-Terminal** | Anti-UI, pro-text | No icons or illustrations |
 
 ---
 
@@ -40,8 +47,8 @@
 git clone https://github.com/your-username/primer.git
 cd primer
 
-# Install dependencies
-npm install
+# Install dependencies (from src directory)
+cd src && npm install
 
 # Start development server
 npm run dev
@@ -59,23 +66,23 @@ npm run preview
 ## Project Structure
 
 ```
-/src
-├── /primers/              # Design system definitions
-│   ├── /rams-60/
-│   │   ├── index.md       # Philosophy & metadata
-│   │   ├── theme.css      # CSS variables
-│   │   └── tokens.json    # Structured data
-│   ├── /ando-concrete/
-│   ├── /barragan-wall/
-│   ├── /anderson-symmetry/
-│   └── /memphis-81/
-├── /layouts/              # Page layouts
-├── /pages/                # Routes (index, about)
-├── /styles/               # Global styles
-└── /scripts/              # Interaction scripts
-
-/public
-└── /primers/              # Static assets for download
+primer/
+├── src/                      # React application
+│   ├── src/
+│   │   ├── primers/          # One Renderer per Primer
+│   │   │   ├── rams-60/
+│   │   │   ├── ando-concrete/
+│   │   │   └── ...
+│   │   ├── components/       # Navigation, AnatomyOverlay
+│   │   ├── context/          # PrimerContext (state)
+│   │   ├── data/             # primers.ts (all definitions)
+│   │   ├── pages/            # LandingPage
+│   │   └── App.tsx
+│   ├── package.json
+│   └── vite.config.ts
+├── public/
+│   └── primers/              # Tokens for download
+└── package.json              # Root (proxies to src/)
 ```
 
 ---
@@ -84,36 +91,41 @@ npm run preview
 
 ### Web Experience
 
-1. 打开网站，直接进入第一个设计体系的全屏渲染
-2. 使用 `←` `→` 方向键或滚轮切换设计体系
-3. 点击 `+` 按钮进入"解剖视图"查看详细设计规格
-4. 通过 "Acquire Primer" 获取 CSS Variables 或 JSON
+1. Open the site and click **Explore** to enter a random Primer
+2. Use arrow buttons or bottom navigation dots to switch Primers
+3. Click **Dissect** to view detailed design specifications
+4. Use **Acquire Primer** to get CSS Variables or download JSON
 
 ### In Your Project
 
 ```css
-/* 直接使用 CSS Variables */
+/* Use CSS Variables directly */
 :root {
   --color-background: #F5F5F5;
   --color-primary: #E64A19;
+  --font-display: "Helvetica Neue", sans-serif;
   /* ... */
 }
-```
-
-```bash
-# 或使用 CLI (coming soon)
-npx primer-cli add rams-60
 ```
 
 ---
 
 ## Design Principles
 
-每个Primer都必须能回答三个核心问题：
+Every Primer must answer three core questions:
 
-1. **叙事核心 (Narrative Core)** — 它的灵魂来自哪里？
-2. **系统规则 (Systemic Rules)** — 它的骨架如何支撑灵魂？
-3. **标志性约束 (Signature Constraint)** — 它通过"不做什么"来定义自己？
+1. **Narrative Core** — Where does its soul come from?
+2. **Systemic Rules** — How does structure support philosophy?
+3. **Signature Constraint** — What does it refuse to do?
+
+---
+
+## Tech Stack
+
+- **React** — Component architecture
+- **Vite** — Fast build tool
+- **TailwindCSS** — Utility-first styling
+- **TypeScript** — Type safety
 
 ---
 
@@ -123,4 +135,4 @@ MIT © Primer Collective
 
 ---
 
-*用深度对抗浅薄，用叙事对抗随机，用意图对抗惯性。*
+*Depth over shallowness. Narrative over randomness. Intention over inertia.*

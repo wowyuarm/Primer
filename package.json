@@ -1,15 +1,11 @@
 {
   "name": "primer",
   "type": "module",
-  "version": "0.1.0",
-  "description": "An Opinionated Anti-Library for AI-driven Design",
+  "version": "2.0.0",
+  "description": "An Opinionated Anti-Library for AI-driven Design. Each Primer is a complete philosophical universe.",
   "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
-  },
-  "dependencies": {
-    "astro": "^5.16.0"
+    "dev": "npm run dev --prefix src",
+    "build": "npm run build --prefix src",
+    "preview": "npm run preview --prefix src"
   }
 }

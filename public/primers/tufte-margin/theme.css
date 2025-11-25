@@ -1,0 +1,15 @@
+/**
+ * Tufte-Margin Theme (Public/Simplified)
+ */
+:root[data-primer="tufte-margin"] {
+  --color-background: #FFFFF8;
+  --color-surface: #FFFFF8;
+  --color-text-main: #111111;
+  --color-text-muted: #666666;
+  --color-primary: #A00000;
+  --color-secondary: #444444;
+  --color-border: #DDDDDD;
+  --font-primary: "et-book", "Palatino Linotype", Georgia, serif;
+  --font-secondary: -apple-system, sans-serif;
+  --border-radius: 0;
+}
