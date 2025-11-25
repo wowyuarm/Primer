@@ -47,8 +47,8 @@ We don't "pick" styles — we **distill** them. Each Primer is a complete world 
 git clone https://github.com/your-username/primer.git
 cd primer
 
-# Install dependencies (from src directory)
-cd src && npm install
+# Install dependencies
+npm install
 
 # Start development server
 npm run dev
@@ -126,12 +126,6 @@ Every Primer must answer three core questions:
 - **Vite** — Fast build tool
 - **TailwindCSS** — Utility-first styling
 - **TypeScript** — Type safety
-
----
-
-## License
-
-MIT © Primer Collective
 
 ---
 
